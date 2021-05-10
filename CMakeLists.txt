@@ -3,4 +3,8 @@ project(gre_protocol)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(gre_protocol main.cpp src/cpp/Router.cpp src/hpp/Router.h src/cpp/Network.cpp src/hpp/Network.h src/cpp/Package.cpp src/hpp/Package.h)
+add_executable(gre_protocol main.cpp src/cpp/Router.cpp src/hpp/Router.h src/cpp/Network.cpp src/hpp/Network.h src/cpp/Package.cpp src/hpp/Package.h src/cpp/Transport.cpp src/hpp/Transport.h)
+
+if(WIN32)
+    target_link_libraries(gre_protocol wsock32 ws2_32)
+endif()
