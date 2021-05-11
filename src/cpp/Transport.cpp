@@ -3,8 +3,7 @@
 #include <cstdio>
 #include <cstring>
 
-char * Transport::receiveMessage(SOCKET socket, char *reply) {
-    int length = (int) strlen(reply);
+char * Transport::receiveMessage(SOCKET socket, char *reply, int length) {
 
     if(recv(socket, reply , length , 0) < 0)
     {
@@ -43,4 +42,8 @@ void Transport::connectWithSocket(SOCKET socket, struct sockaddr_in server) {
         puts("connect error");
         return;
     }
+}
+
+void Transport::closeSocket(SOCKET socket) {
+    closesocket(socket);
 }

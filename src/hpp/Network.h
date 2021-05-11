@@ -8,11 +8,13 @@
 
 #include "Router.h"
 
+class Router;
+
 class Network {
 
-    private:
-        Router router1;
-        Router router2;
+private:
+    Router *router1;
+    Router *router2;
 };
 
 

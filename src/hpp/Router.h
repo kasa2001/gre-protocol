@@ -10,15 +10,17 @@
 #include "Package.h"
 #include <string>
 
+class Network;
+
 using namespace std;
 
 class Router {
 
     private:
-        Network e00;
-        Network e01;
-        Network e02;
-        Network e03;
+        Network *e00;
+        Network *e01;
+        Network *e02;
+        Network *e03;
 
     public:
         void connectWithNetwork(Network network, string interface);
