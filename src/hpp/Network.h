@@ -1,21 +1,33 @@
-//
-// Created by pawel on 26.04.2021.
-//
-
 #ifndef GRE_PROTOCOL_NETWORK_H
 #define GRE_PROTOCOL_NETWORK_H
 
 
 #include "Router.h"
+#include <winsock2.h>
 
 class Router;
 
 class Network {
 
 private:
-    Router *router1;
-    Router *router2;
+    int clientPort;
+    int serverPort;
+    int startPort;
+    int routerId;
+public:
+
+    Network(int clientPort, int serverPort, int routerId);
+
+    int getClientPort() const;
+
+    int getServerPort() const;
+
+    int getStartPort() const;
+
+    void setStartPort(int port);
+
+    int getRouterId() const;
 };
 
 
-#endif //GRE_PROTOCOL_NETWORK_H
+#endif
