@@ -40,6 +40,7 @@ void startSimulation() {
                        "Brak zdefiniowanego endpoint-a GRE w startowym routerze",
                        "Blad", MB_ICONEXCLAMATION);
             return;
+
         }
 
         for (int i = 0; i < 4; i++) {
