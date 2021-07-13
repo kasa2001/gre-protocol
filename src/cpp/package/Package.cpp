@@ -11,6 +11,7 @@ string Package::toString() {
 Package::Package(int port, string dest) {
     this->portDestination = port;
     this->hostDestination = move(dest);
+
 }
 
 int Package::getPortDestination() const {
