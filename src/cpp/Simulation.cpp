@@ -1,5 +1,6 @@
 #include <windows.h>
 #include <string>
+#include <iostream>
 #include "../hpp/Simulation.h"
 #include "../hpp/routerFunction.h"
 #include "../hpp/package/StartControlConnecting.h"
@@ -25,6 +26,7 @@ void startSimulation() {
                    "Brak logicznego polaczenia GRE",
                    "Blad", MB_ICONEXCLAMATION);
         return;
+        cout << "ala ma kota";
     }
 
     if (startRouter[0] == '/0') {
