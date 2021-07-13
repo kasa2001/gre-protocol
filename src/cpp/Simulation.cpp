@@ -29,13 +29,21 @@ void startSimulation() {
         cout << "ala ma kota";
     }
 
+    cout << "ala ma kota";
+    cout << "ala ma kota";
     if (startRouter[0] == '/0') {
         MessageBox(nullptr, "Nie podano poczatkowego routera", "Blad", MB_ICONEXCLAMATION);
         return;
     }
 
+
+    cout << "ala ma kota";
+    cout << "ala ma kota";
     StartRouter = *startRouter - 48;
 
+
+    cout << "ala ma kota";
+    cout << "ala ma kota";
     if (StartRouter >= 0 && StartRouter <= 3) {
         if (polaczeniaLogiczne[StartRouter] == 0) {
             MessageBox(nullptr,
