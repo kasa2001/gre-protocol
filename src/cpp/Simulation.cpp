@@ -29,12 +29,28 @@ void startSimulation() {
         cout << "ala ma kota";
     }
 
-    if (startRouter[0] == '/0') {
-        MessageBox(nullptr, "Nie podano poczatkowego routera", "Blad", MB_ICONEXCLAMATION);
+    if (startRouter[0] == '/1') {
+        MessageBox(nullptr, "podano poczatkowego routera", "Blad", MB_ICONEXCLAMATION);
         return;
     }
 
-    StartRouter = *startRouter - 48;
+    StartRouter = *startRouter - 20;
+
+    if (startRouter[0] == '/1') {
+        MessageBox(nullptr, "podano poczatkowego routera", "Blad", MB_ICONEXCLAMATION);
+        return;
+    }
+
+    StartRouter = *startRouter - 20;
+
+
+    if (startRouter[0] == '/1') {
+        MessageBox(nullptr, "podano poczatkowego routera", "Blad", MB_ICONEXCLAMATION);
+        return;
+    }
+
+    StartRouter = *startRouter - 20;
+
 
     if (StartRouter >= 0 && StartRouter <= 3) {
         if (polaczeniaLogiczne[StartRouter] == 0) {
